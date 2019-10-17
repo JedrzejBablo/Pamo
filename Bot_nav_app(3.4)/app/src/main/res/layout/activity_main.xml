@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="invisible">
+
+        <TextView
+            android:id="@+id/Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/title_home"
+            tools:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="invisible">
+
+        <TextView
+            android:id="@+id/bmi_wagaView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waga_kg"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/bmi_wagaEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/waga"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/bmi_wzrostView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wzrost_cm"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/bmi_wzrostEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/wzrost"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/bmi_oblicz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oblicz" />
+
+        <TextView
+            android:id="@+id/bmiWynik"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#E91E63"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notifications_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ppm_plecView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/plec"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton_kobieta"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:text="@string/kobieta" />
+
+            <RadioButton
+                android:id="@+id/radioButton_menzczyzna"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mezczyzna" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/ppm_wagaView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/waga_kg"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ppm_wagaEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/waga"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/ppm_wzrostView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wzrost_cm"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ppm_wzrostEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/wzrost"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/ppm_wiekView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wiekView"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ppm_wiekEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="wiek"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/ppm_oblicz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oblicz" />
+
+        <TextView
+            android:id="@+id/ppm_wynik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E91E63"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/imageView_veryLow"
+            android:layout_width="51dp"
+            android:layout_height="34dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/very_low" />
+
+        <ImageView
+            android:id="@+id/imageView_low"
+            android:layout_width="49dp"
+            android:layout_height="34dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/low" />
+
+        <ImageView
+            android:id="@+id/imageView_normal"
+            android:layout_width="50dp"
+            android:layout_height="33dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/normal" />
+
+        <ImageView
+            android:id="@+id/imageView_high"
+            android:layout_width="52dp"
+            android:layout_height="41dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/high" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
