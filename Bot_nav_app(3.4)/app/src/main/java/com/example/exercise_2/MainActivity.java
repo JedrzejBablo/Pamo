@@ -12,11 +12,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private LinearLayout home;
     private LinearLayout dashboard;
     private LinearLayout notifications;
+    public ConstraintLayout images;
     public ImageView very_low;
     public ImageView low;
     public ImageView normal;
@@ -37,12 +40,14 @@ public class MainActivity extends AppCompatActivity {
                     home.findViewById(R.id.home_layout).setVisibility(View.VISIBLE);
                     dashboard.findViewById(R.id.dashboard_layout).setVisibility(View.INVISIBLE);
                     notifications.findViewById(R.id.notifications_layout).setVisibility(View.INVISIBLE);
+                    images.findViewById(R.id.images_layout).setVisibility(View.INVISIBLE);
                     return true;
                 case R.id.navigation_dashboard:
                     //mTextMessage.setText(R.string.title_dashboard);
                     home.findViewById(R.id.home_layout).setVisibility(View.INVISIBLE);
                     dashboard.findViewById(R.id.dashboard_layout).setVisibility(View.VISIBLE);
-                    findViewById(R.id.notifications_layout).setVisibility(View.INVISIBLE);
+                    notifications.findViewById(R.id.notifications_layout).setVisibility(View.INVISIBLE);
+                    images.findViewById(R.id.images_layout).setVisibility(View.INVISIBLE);
                     final EditText bmi_waga = (EditText) findViewById(R.id.bmi_wagaEdit);
                     final EditText bmi_wzrost = (EditText) findViewById(R.id.bmi_wzrostEdit);
                     final TextView bmi_wynik = (TextView) findViewById(R.id.bmiWynik);
@@ -81,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     home.findViewById(R.id.home_layout).setVisibility(View.INVISIBLE);
                     dashboard.findViewById(R.id.dashboard_layout).setVisibility(View.INVISIBLE);
                     notifications.findViewById(R.id.notifications_layout).setVisibility(View.VISIBLE);
+                    images.findViewById(R.id.images_layout).setVisibility(View.VISIBLE);
 
                     final EditText ppm_waga = (EditText) findViewById(R.id.ppm_wagaEdit);
                     final EditText ppm_wzrost = (EditText) findViewById(R.id.ppm_wzrostEdit);
@@ -141,9 +147,11 @@ public class MainActivity extends AppCompatActivity {
         home = findViewById(R.id.home_layout);
         dashboard = findViewById(R.id.dashboard_layout);
         notifications = findViewById(R.id.notifications_layout);
+        images = findViewById(R.id.images_layout);
         home.findViewById(R.id.home_layout).setVisibility(View.VISIBLE);
         dashboard.findViewById(R.id.dashboard_layout).setVisibility(View.INVISIBLE);
         notifications.findViewById(R.id.notifications_layout).setVisibility(View.INVISIBLE);
+        images.findViewById(R.id.images_layout).setVisibility(View.INVISIBLE);
     }
 
     private float obliczBMI (float bmi_waga, float bmi_wzrost) {

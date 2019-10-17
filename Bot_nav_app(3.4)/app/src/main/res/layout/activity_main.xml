@@ -189,36 +189,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#E91E63"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textStyle="italic" />
 
-        <ImageView
-            android:id="@+id/imageView_veryLow"
-            android:layout_width="51dp"
-            android:layout_height="34dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/very_low" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/images_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView_low"
-            android:layout_width="49dp"
-            android:layout_height="34dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/low" />
+            <ImageView
+                android:id="@+id/imageView_veryLow"
+                android:layout_width="446dp"
+                android:layout_height="155dp"
+                android:layout_marginBottom="44dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_low"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/very_low" />
 
-        <ImageView
-            android:id="@+id/imageView_normal"
-            android:layout_width="50dp"
-            android:layout_height="33dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/normal" />
+            <ImageView
+                android:id="@+id/imageView_low"
+                android:layout_width="454dp"
+                android:layout_height="151dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_high"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/low" />
 
-        <ImageView
-            android:id="@+id/imageView_high"
-            android:layout_width="52dp"
-            android:layout_height="41dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/high" />
+            <ImageView
+                android:id="@+id/imageView_normal"
+                android:layout_width="445dp"
+                android:layout_height="147dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_low"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/normal" />
+
+            <ImageView
+                android:id="@+id/imageView_high"
+                android:layout_width="444dp"
+                android:layout_height="153dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_veryLow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/high" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
