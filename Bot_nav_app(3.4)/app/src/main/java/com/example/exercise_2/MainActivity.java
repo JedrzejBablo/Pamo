@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public ImageView high;
     public int gender = 1;
     private double ppm = 0.0;
+    public RadioGroup radioGroup;
 
 
 
@@ -87,6 +89,23 @@ public class MainActivity extends AppCompatActivity {
                     dashboard.findViewById(R.id.dashboard_layout).setVisibility(View.INVISIBLE);
                     notifications.findViewById(R.id.notifications_layout).setVisibility(View.VISIBLE);
                     images.findViewById(R.id.images_layout).setVisibility(View.VISIBLE);
+
+                    radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+                    radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                        @Override
+                        public void onCheckedChanged(RadioGroup group, int checkedId) {
+                            View radioButton = radioGroup.findViewById(checkedId);
+                            int index = radioGroup.indexOfChild(radioButton);
+                            switch (index) {
+                                case 0:
+                                    gender = 0;
+                                    break;
+                                case 1:
+                                    gender = 1;
+                                    break;
+                            }
+                        }
+                    });
 
                     final EditText ppm_waga = (EditText) findViewById(R.id.ppm_wagaEdit);
                     final EditText ppm_wzrost = (EditText) findViewById(R.id.ppm_wzrostEdit);
