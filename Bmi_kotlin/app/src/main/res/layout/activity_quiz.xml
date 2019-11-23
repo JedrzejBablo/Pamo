@@ -12,10 +12,10 @@
         android:paddingTop="16dp"
         tools:context="com.example.exercise_2.QuizActivity"
         android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        >
 
         <Button
-            android:text="Button"
+            android:text="@string/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -23,7 +23,7 @@
             android:id="@+id/answer4"/>
 
         <Button
-            android:text="Button"
+            android:text="@string/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/answer4"
@@ -31,7 +31,7 @@
             android:id="@+id/answer3"/>
 
         <Button
-            android:text="Button"
+            android:text="@string/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/answer3"
@@ -45,11 +45,11 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:textSize="24sp"
-            android:text="textView"
+            android:text="@string/textview"
             android:id="@+id/score"/>
 
         <TextView
-            android:text="textView"
+            android:text="@string/textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -60,7 +60,7 @@
             android:layout_above="@+id/answer1"/>
 
         <Button
-            android:text="Button"
+            android:text="@string/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/answer2"

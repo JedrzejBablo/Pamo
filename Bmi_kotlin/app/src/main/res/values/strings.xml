@@ -25,4 +25,7 @@
     <string name="drugi_kwarta">Drugi kwartał:</string>
     <string name="trzeci_kwarta">Trzeci kwartał:</string>
     <string name="czwarty_kwarta">Czwarty kwartał:</string>
+    <string name="go_back">Go Back</string>
+    <string name="button">Button</string>
+    <string name="textview">textView</string>
 </resources>

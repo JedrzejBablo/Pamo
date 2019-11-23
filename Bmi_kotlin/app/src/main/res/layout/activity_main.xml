@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/container"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingTop="?attr/actionBarSize"
-tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-<com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/nav_view"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="0dp"
-    android:layout_marginEnd="0dp"
-    android:background="?android:attr/windowBackground"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:menu="@menu/bottom_nav_menu" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
     <LinearLayout
         android:id="@+id/home_layout"
@@ -26,7 +25,7 @@ tools:context=".MainActivity">
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="56dp"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <TextView
             android:id="@+id/textView"
@@ -49,10 +48,10 @@ tools:context=".MainActivity">
             android:id="@+id/styczen_text_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true"
-            android:autofillHints="" />
+            android:singleLine="true" />
 
         <TextView
             android:id="@+id/month_textView2"
@@ -64,9 +63,9 @@ tools:context=".MainActivity">
             android:id="@+id/luty_text_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
-            android:inputType="number"
-            android:autofillHints="" />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/month_textView3"
@@ -78,9 +77,9 @@ tools:context=".MainActivity">
             android:id="@+id/marzec_text_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
-            android:inputType="number"
-            android:autofillHints="" />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/month_textView4"
@@ -92,9 +91,9 @@ tools:context=".MainActivity">
             android:id="@+id/kwiecien_text_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
-            android:inputType="number"
-            android:autofillHints="" />
+            android:inputType="number" />
 
         <Button
             android:id="@+id/bt_activity_changer"
@@ -110,7 +109,8 @@ tools:context=".MainActivity">
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:visibility="visible">
+        tools:layout_editor_absoluteY="56dp"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/bt_quiz"
@@ -125,7 +125,8 @@ tools:context=".MainActivity">
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:visibility="invisible"
-        tools:layout_editor_absoluteY="56dp">
+        tools:layout_editor_absoluteY="56dp"
+        tools:visibility="invisible">
 
         <LinearLayout
             android:id="@+id/notifications_layout"
