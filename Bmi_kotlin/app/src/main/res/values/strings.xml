@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Bot_nav_app</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="waga_kg">Podaj wage(kg):</string>
+    <string name="waga">waga</string>
+    <string name="wzrost_cm">Podaj wzrost(cm):</string>
+    <string name="wzrost">wzrost</string>
+    <string name="oblicz">Oblicz</string>
+    <string name="wiek">Podaj wiek:</string>
+    <string name="przemiana_materii">Przemiana Materii</string>
+    <string name="plec">Wybierz płeć:</string>
+    <string name="kobieta">Kobieta</string>
+    <string name="mezczyzna">Mężczyzna</string>
+    <string name="wiekView">Podaj wiek:</string>
+    <string name="welcome_message">Podaj dane(waga w kg), żeby zobaczyć postęp lub regres na wykresie</string>
+    <string name="bt_activity_text">Zobacz wykres</string>
+    <string name="quiz_o_zdrowiu">Quiz o zdrowiu</string>
+    <string name="wiek_hint">wiek</string>
+    <string name="verylow">veryLow</string>
+    <string name="normal">normal</string>
+    <string name="high">high</string>
+    <string name="pierwszy_kwarta">Pierwszy kwartał:</string>
+    <string name="drugi_kwarta">Drugi kwartał:</string>
+    <string name="trzeci_kwarta">Trzeci kwartał:</string>
+    <string name="czwarty_kwarta">Czwarty kwartał:</string>
+</resources>
